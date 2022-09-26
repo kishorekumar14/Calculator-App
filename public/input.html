@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<h1>ARITHMETIC CALCULATOR</h1>
+<br><br>
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" placeholder="Enter Number one..." name="num1" id="inp"><br><br>
+    <input type="text" placeholder="Enter Number two..." name="num2" id="inp"><br><br>
+    <br>
+    <input type="submit" value="Add" formaction="/add" id="but">&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Sub" formaction="/sub" id="but">&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Mul" formaction="/multi" id="but">&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Div" formaction="/div" id="but">
+</form>
+
+
+{% endblock %}
